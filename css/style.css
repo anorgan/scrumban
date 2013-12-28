@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext);
+
+* { font-family: 'Open Sans'; }
+
+/* BOARD SECTION */
+.board-section { border-top: 1px solid #DEDEDE; border-bottom: 1px solid #AEAEAE; border-left: 1px solid #AEAEAE; background: #FAFAFA; padding-left: 0 !important; padding-right: 0 !important; height: 500px; box-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+  .board-section:last-child { border-right: 1px solid #AEAEAE; }
+.board-section .section-title { text-transform: uppercase; font-size: 16px; border-bottom: 2px solid #2386FE; height: 45px; padding: 10px }
+.board-section .velocity { float: right }
+.board-section .velocity.danger, .board-section .velocity.danger > * { color: #DB000F; }
+.board-section .velocity.perfect, .board-section .velocity.perfect > *  { color: #00B31B; }
+.board-section .velocity.cool, .board-section .velocity.cool > *  { color: #74878A; }
+.board-section .velocity input { width: 30px; border: none; background: transparent; text-align: left; }
+
+/* CARD */
+.card { width: 85%; margin: 16px auto; border: 1px solid #AFAFAF; border-left: 4px solid #AFAFAF; padding: 4px 4px 4px 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+  .card .relation { text-align: right; margin-bottom: 3px; }
+    .card .relation span { font-size: 10px; text-transform: uppercase; border: 1px solid #AFAFAF; padding: 2px; }
+  .card .title {}
+  .card .planning { text-align: right; }
+    .card .planning span { border: 1px solid #AFAFAF; padding: 2px 6px; border-radius: 3px; background: #DFDFDF; }
+  .card.user-story { border-left: 4px solid #2C8FE6; }
