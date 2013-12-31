@@ -9,4 +9,8 @@
 
     <card ng-repeat="card in boardSection.cards"></card>
 
+    <form ng-submit="addCard()">
+        <input type="text" name="title" ng-model="title" >
+        <input type="submit" id="submit" value="Ok" ng-hide />
+    </form>
 </div>

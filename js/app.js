@@ -96,6 +96,9 @@ angular.module('app', [])
     controller: function($scope) {
       $scope.totalEffort = $scope.getTotalEffort($scope.boardSection.cards);
       $scope.velocity = $scope.boardSection.velocity;
+      $scope.addCard = function(card) {
+        $scope.boardSection.cards.push(card);
+      };
     },
     templateUrl: './js/partials/board-section.tpl'
   };
