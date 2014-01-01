@@ -2,8 +2,10 @@
 
 * { font-family: 'Open Sans'; }
 
+.board { height: 700px; }
+
 /* BOARD SECTION */
-.board-section { border-top: 1px solid #DEDEDE; border-bottom: 1px solid #AEAEAE; border-left: 1px solid #AEAEAE; background: #FAFAFA; padding-left: 0 !important; padding-right: 0 !important; height: 500px; box-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+.board-section { border-top: 1px solid #DEDEDE; border-bottom: 1px solid #AEAEAE; border-left: 1px solid #AEAEAE; background: #FAFAFA; padding-left: 0 !important; padding-right: 0 !important; height: 100%; box-shadow: 0 1px 2px rgba(0,0,0,0.5); }
   .board-section:last-child { border-right: 1px solid #AEAEAE; }
 .board-section .section-title { text-transform: uppercase; font-size: 16px; border-bottom: 2px solid #2386FE; height: 45px; padding: 10px }
 .board-section .velocity { float: right }
@@ -20,3 +22,4 @@
   .card .planning { text-align: right; }
     .card .planning span { border: 1px solid #AFAFAF; padding: 2px 6px; border-radius: 3px; background: #DFDFDF; }
   .card.user-story { border-left: 4px solid #2C8FE6; }
+  .card .effort input { width: 20px; background: none; border: none; text-align: right; }

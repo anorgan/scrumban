@@ -4,13 +4,13 @@
       <span class="velocity" ng-class="{danger: totalEffort > velocity, perfect: totalEffort == velocity, cool: totalEffort < velocity}">
         <span ng-show="velocity > 0">{{ totalEffort }} /</span>
         <input type="text" name="velocity" ng-model="velocity">
-      </span>  
+      </span>
     </div>
 
     <card ng-repeat="card in boardSection.cards"></card>
 
     <form ng-submit="addCard()">
         <input type="text" name="title" ng-model="title" >
-        <input type="submit" id="submit" value="Ok" ng-hide />
+        <input type="submit" id="submit" value="Ok" ng-hide="true" />
     </form>
 </div>
