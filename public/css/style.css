@@ -22,4 +22,5 @@
   .card .planning { text-align: right; }
     .card .planning span { border: 1px solid #AFAFAF; padding: 2px 6px; border-radius: 3px; background: #DFDFDF; }
   .card.user-story { border-left: 4px solid #2C8FE6; }
+  .card.bug { border-left: 4px solid #DB000F; }
   .card .effort input { width: 20px; background: none; border: none; text-align: right; }

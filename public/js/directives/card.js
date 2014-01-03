@@ -4,7 +4,7 @@ angular.module('directives.card', [])
         restrict: 'AE',
         controller: ['$scope', function($scope) {
             $scope.update = function() {
-                $scope.totalEffort = $scope.getTotalEffort($scope.boardSection.cards);
+                $scope.$emit('card.update', $scope.card);
             };
         }],
         templateUrl: './js/partials/card.tpl.html'
