@@ -15,12 +15,14 @@ angular.module('directives.boardSection', [])
                         effort: 3,
                         type: 'bug'
                     });
+                    $scope.boardSection.update();
                     $scope.totalEffort = $scope.getTotalEffort($scope.boardSection.cards);
                     this.title = null;
                 }
             };
 
-            $scope.$on('card.update', function(event, data) { 
+            $scope.$on('card.update', function(event, data) {
+                $scope.boardSection.update();
                 $scope.totalEffort = $scope.getTotalEffort($scope.boardSection.cards);
             });
 

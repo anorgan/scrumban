@@ -9,8 +9,8 @@ angular.module('board', [
     });
 }])
 
-.controller('BoardCtrl', ['$scope', '$location', 'BoardSections', function ($scope, $location, BoardSections) {
-    $scope.sections = BoardSections.getAll();
+.controller('BoardCtrl', ['$scope', '$location', 'BoardSectionService', function ($scope, $location, BoardSectionService) {
+    $scope.sections = BoardSectionService.getAll();
 
     $scope.getTotalEffort = function(cards) {
         var effort = 0;

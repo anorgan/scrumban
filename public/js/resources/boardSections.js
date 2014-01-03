@@ -1,5 +1,9 @@
-angular.module('resources.boardSections', []);
-angular.module('resources.boardSections').factory('BoardSections', function () {
+
+angular.module('resources.boardSections', [
+    'ngResource'
+]);
+
+angular.module('resources.boardSections').factory('BoardSectionService', ['$resource', function ($resource) {
     var sections = [
         {
             id: 'backlog',
@@ -79,11 +83,25 @@ angular.module('resources.boardSections').factory('BoardSections', function () {
         },
     ];
     
-    var boardSectionsService = {};
-    
-    boardSectionsService.getAll = function() {
-        return sections;
+    var BoardSectionService = $resource('https://api.mongolab.com/api/1/databases' +
+        '/scrumban/collections/boardSections/:id',
+        { apiKey: '5112196ae4b0cb76f73fc95e' }, {
+            update: { method: 'PUT' }
+        }
+    );
+
+    BoardSectionService.getAll = function(cb) {
+        return BoardSectionService.query();
     };
-  
-    return boardSectionsService;
-});
+
+    BoardSectionService.prototype.update = function(cb) {
+        return BoardSectionService.update({id: this._id.$oid},
+        angular.extend({}, this, {_id:undefined}), cb);
+    };
+
+    BoardSectionService.prototype.destroy = function(cb) {
+        return BoardSectionService.remove({id: this._id.$oid}, cb);
+    };
+
+    return BoardSectionService;
+}]);
