@@ -4,9 +4,9 @@ angular.module('directives.boardSection', [])
         restrict: 'AE',
         
         controller: ['$scope', function($scope) {
-
-            $scope.totalEffort = $scope.getTotalEffort($scope.boardSection.cards);
-            $scope.velocity = $scope.boardSection.velocity;
+            $scope.cards        = $scope.boardSection.cards;
+            $scope.totalEffort  = $scope.getTotalEffort($scope.boardSection.cards);
+            $scope.velocity     = $scope.boardSection.velocity;
 
             $scope.addCard = function() {
                 if (this.title) {
