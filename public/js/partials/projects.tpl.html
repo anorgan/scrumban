@@ -1,0 +1,13 @@
+<h1>Projects</h1>
+
+<ul>
+    <li ng-repeat="project in projects">
+        <p><a href="/projects/{{ project.id }}/">{{ project.title }}</a> ({{ project.code }})</p>
+    </li>
+</ul>
+
+<form ng-submit="addProject()">
+    <input type="text" ng-model="projectTitle" size="30" placeholder="add new project">
+    <input type="text" ng-model="projectCode" size="5" placeholder="short code">
+    <input class="btn-primary" type="submit" value="add">
+</form>

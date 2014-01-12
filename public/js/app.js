@@ -4,7 +4,8 @@ angular.module('app', [
     'ngRoute',
     'directives.card',
     'directives.boardSection',
-    'board'
+    'board',
+    'projects'
 ]);
 
 angular.module('app').config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
